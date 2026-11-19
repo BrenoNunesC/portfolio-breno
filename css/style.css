@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+a {
+    color: #00d166;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #00a650;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a {
+    margin-left: 10px;
+    padding: 8px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.atual {
+    background-color: #1e1e1e;
+}
+
+/* Página inicial */
+.inicio {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+}
+
+.foto {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #00a650;
+}
+
+.ola {
+    color: #00d166;
+    font-size: 18px;
+}
+
+.apresentacao h1 {
+    font-size: 56px;
+    margin: 5px 0;
+}
+
+.cargo {
+    font-size: 20px;
+    color: #bbbbbb;
+    margin-bottom: 20px;
+}
+
+.apresentacao p {
+    line-height: 1.7;
+}
+
+.botoes {
+    margin-top: 30px;
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 12px 25px;
+    background-color: #00a650;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid #00a650;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #008a43;
+    border-color: #008a43;
+}
+
+.botao-borda {
+    background-color: transparent;
+    color: #00d166;
+}
+
+.botao-borda:hover {
+    color: #ffffff;
+}
+
+/* Páginas internas */
+.pagina {
+    flex: 1;
+    padding: 50px 60px;
+}
+
+.titulo {
+    font-size: 36px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 6px solid #00a650;
+}
+
+/* Sobre */
+.grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.caixa {
+    padding: 30px;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+}
+
+.caixa h2 {
+    color: #00d166;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.caixa p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.lista-tec {
+    list-style: none;
+}
+
+.lista-tec li {
+    display: inline-block;
+    margin: 0 8px 10px 0;
+    padding: 6px 16px;
+    background-color: #00a650;
+    border-radius: 20px;
+}
+
+/* Projetos */
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projeto {
+    padding: 25px;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    border-top: 6px solid #00a650;
+    transition: 0.3s;
+}
+
+.projeto:hover {
+    background-color: #333333;
+}
+
+.tipo {
+    font-size: 12px;
+    color: #00d166;
+    text-transform: uppercase;
+}
+
+.projeto h2 {
+    font-size: 22px;
+    margin: 8px 0 12px;
+}
+
+.projeto p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.detalhes {
+    display: none;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+.rodape {
+    padding: 25px;
+    background-color: #00a650;
+    color: #ffffff;
+    text-align: center;
+}
+
+.redes {
+    margin-bottom: 10px;
+}
+
+.redes a {
+    margin: 0 12px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.rodape p {
+    font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .grade-projetos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu a {
+        margin: 0 3px;
+        padding: 8px 12px;
+    }
+
+    .inicio,
+    .pagina {
+        padding: 30px 20px;
+    }
+
+    .foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .apresentacao h1 {
+        font-size: 38px;
+    }
+
+    .botao {
+        margin: 5px;
+    }
+
+    .grade,
+    .grade-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .redes a {
+        display: block;
+        margin: 8px 0;
+    }
+}
